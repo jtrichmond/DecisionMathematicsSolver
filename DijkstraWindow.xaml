@@ -1,0 +1,31 @@
+﻿<Window x:Class="WPF_code.DijkstraWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_code"
+        mc:Ignorable="d"
+        Title="DijkstraWindow" Height="450" Width="800" WindowState="Maximized">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" 
+               HorizontalAlignment="Center" VerticalAlignment="Center"
+               Content="Select the starting node for Dijkstra's Shortest Path Algorithm"/>
+        <ComboBox Name ="StartNodeComboBox" SelectionChanged="StartNodeComboBox_SelectionChanged" 
+                  Grid.Row="1" Grid.ColumnSpan="2" 
+                  HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center" Width="120"/>
+
+        <Button Grid.Row = "3" Grid.Column="0" Margin = "10" Name="MainMenuButton" 
+                Click = "MainMenuButton_Click" Content ="Main Menu"/>
+        <Button Grid.Row = "3" Grid.Column = "1" Margin = "10" Name = "ContinueButton" 
+                Click="ContinueButton_Click" Content = "Continue"/>
+    </Grid>
+</Window>

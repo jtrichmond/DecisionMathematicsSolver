@@ -1,0 +1,10 @@
+﻿<Application x:Class="WPF_code.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPF_code"
+             StartupUri="MainWindow.xaml"
+             ShutdownMode="OnLastWindowClose">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

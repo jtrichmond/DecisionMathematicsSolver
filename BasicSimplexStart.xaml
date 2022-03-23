@@ -1,0 +1,50 @@
+﻿<Window x:Class="WPF_code.BasicSimplexStart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_code"
+        mc:Ignorable="d"
+        Title="BasicSimplexStart" Height="450" Width="800" WindowState="Maximized">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" HorizontalAlignment="Center" 
+               VerticalAlignment="Center" Content="Basic Simplex"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   TextWrapping="Wrap" TextAlignment="Center">
+            Enter the variables' names, separated by a space. 
+            Do not include the name of the objective function.
+        </TextBlock>
+        <TextBox Name ="VariableNameTextBox" Grid.Row="1" Grid.Column="1" Width="200" 
+                 HorizontalAlignment="Center" VerticalAlignment="Center" 
+                 Text="Enter here" HorizontalContentAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   TextAlignment="Center" TextWrapping="Wrap">
+            Enter the names of the basic variables, separated by a space. 
+            There must be the same number of basic variables as constraints. 
+            These must be included in the names of the variables.
+            Do not include the name of the objective function.
+        </TextBlock>
+        <TextBox Name ="BasicVariablesTextBox" Grid.Row="2" Grid.Column="1" Width="200" 
+                 HorizontalAlignment="Center" VerticalAlignment="Center" 
+                 Text="Enter here" HorizontalContentAlignment="Center"/>
+        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" 
+               Content="What is the name of the objective function?"/>
+        <TextBox Name ="ObjectiveTextBox" Grid.Row="3" Grid.Column="1" Width="200" 
+                 HorizontalAlignment="Center" VerticalAlignment="Center" 
+                 Text="Enter here" HorizontalContentAlignment="Center"/>
+        <Button Grid.Row ="4" Grid.Column="0" Margin="10" Name="MainMenuButton" Content="Main Menu"  Click="MainMenuButton_Click"/>
+        <Button Grid.Row="4" Grid.Column="1" Margin="10" Name ="ContinueButton" Content="Continue" Click="ContinueButton_Click"/>
+    </Grid>
+</Window>

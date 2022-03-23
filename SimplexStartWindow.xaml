@@ -1,0 +1,42 @@
+﻿<Window x:Class="WPF_code.SimplexStartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_code"
+        mc:Ignorable="d"
+        Title="SimplexStartWindow" Height="450" Width="800" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Simplex" 
+               HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <Label Grid.Row =" 1" Grid.Column="0" Content="Select which Simplex method to use" 
+               HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <ComboBox Name="MethodComboBox" Grid.Row="1" Grid.Column="1" 
+                  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                  Width="200" SelectionChanged="MethodComboBox_SelectionChanged">
+            <ComboBoxItem Content="Basic"/>
+        </ComboBox>
+        <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center">
+            How many constraints are there? (this does not include any objective functions)
+        </TextBlock>
+        <TextBox Name="ConstraintTextBox" Grid.Row="2" Grid.Column="1" 
+                 Text="Enter here" HorizontalContentAlignment="Center" 
+                 HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"/>
+        <Button Grid.Row ="4" Grid.Column="0" Margin="10" 
+                Name="BackButton" Content="Back"  Click="BackButton_Click"/>
+        <Button Grid.Row="4" Grid.Column="1" Margin="10" 
+                Name ="ContinueButton" Content="Continue" Click="ContinueButton_Click"/>
+        
+    </Grid>
+</Window>

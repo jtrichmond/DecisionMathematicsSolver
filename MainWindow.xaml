@@ -1,0 +1,42 @@
+﻿<Window x:Class="WPF_code.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_code"
+        mc:Ignorable="d"
+        Title="Decision Maths Solver" Height="450" Width="800" WindowState="Maximized">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+      
+        <Label Grid.Row="0" Content="Please Select Your Algorithm" HorizontalAlignment="Center" Margin="10" 
+               VerticalAlignment="Top" FontSize="50"/>
+        <Menu Grid.Row="1" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" 
+              FlowDirection="LeftToRight" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Vertical"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <Menu.Resources>
+                <Style TargetType="MenuItem">
+                    <!-- Sets values for properties of items in the menu-->
+                    <Setter Property="Width" Value="Auto"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="FontSize" Value ="30"/>
+                </Style>
+            </Menu.Resources>
+            <MenuItem Name ="SortMenuItem" Header ="Sorting Algorithms" Click="SortMenuItem_Click"/>
+            <MenuItem Name ="NetworkMenuItem" Header="Network Algorithms" Click="NetworkMenuItem_Click"/>
+            <MenuItem Name ="SimplexMenuItem" Header="Simplex Algorithms" Click="SimplexMenuItem_Click"/>
+
+        </Menu>
+        <Button Grid.Row="2" Name ="Exit" Content ="Exit" Click="Exit_Click" FontSize="30"/>
+    </Grid>
+
+</Window>
